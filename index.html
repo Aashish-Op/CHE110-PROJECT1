@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Convenience to Consequence: The Environmental Impact of Plastic Waste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href=
+    "https://img.icons8.com/?size=48&id=81353&format=png" 
+              type="image/x-icon"></head>
+<body>
+    <div class="background-video">
+        <video autoplay loop muted playsinline>
+            <source src="7056755-uhd_2160_3744_30fps.mp4" type="video/mp4">
+            <!-- Fallback for video background -->
+            <div class="fallback-background"></div>
+        </video>
+    </div>
+
+    <!-- Content Overlay -->
+    <div class="content">
+        <header class="header">
+            <img src="https://w7.pngwing.com/pngs/44/153/png-transparent-earth-cleaning-planet-natural-environment-earth-globe-recycling-logo.png" alt="UN Environment Programme Logo" class="logo">
+            <nav>
+                <ul class="languages">
+                    <li>English</li>
+                    <li>Español</li>
+                    <li>Français</li>
+                    <li>简体中文</li>
+                    <li>العربية</li>
+                    <li>Русский</li>
+                    <li>Kiswahili</li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-content">
+            <h1>Our planet <br> <span class="highlight">is choking</span> <br> on plastic</h1>
+            <br>
+            <br>
+            <h3>It is time to change how we produce, consume and dispose of the plastic we use.</h3>
+
+        </main>
+    </div>
+    <section id="home">
+        <h1>From Convenience to Consequence: The Environmental Impact of Plastic Waste</h1>
+        <p>Welcome to our website, where we explore the environmental impact of plastic waste and provide resources to help you reduce your plastic footprint.</p>
+    </section>
+    <header class="headernav">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="section.htm">Calculator</a></li>
+                <li><a href="researh.htm">Research</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main1">
+        <div class="container">
+            <div class="hero">
+                <h1>From Convenience to Consequence</h1>
+                <p>Unveiling the Hidden Cost of Plastic Waste</p>
+            </div>
+    
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="impact">Environmental Impact</button>
+                    <button class="tab-button" data-tab="solutions">Solutions</button>
+                    <button class="tab-button" data-tab="action">Take Action</button>
+                </div>
+    
+                <div id="impact" class="tab-content active">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Ocean Impact</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                            <p>By 2050, there will be more plastic than fish in our oceans</p>
+                        </div>
+                        <div class="card">
+                            <h3>Marine Life Impact</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <p>Over 700 species affected by plastic pollution</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="solutions" class="tab-content">
+                    <div class="card">
+                        <h3>Innovation Hub</h3>
+                        <div class="card-grid">
+                            <div class="card">
+                                <h4>Biodegradable Alternatives</h4>
+                                <p>Exploring seaweed-based packaging and other eco-friendly solutions</p>
+                            </div>
+                            <div class="card">
+                                <h4>Waste-to-Energy</h4>
+                                <p>Converting plastic waste into sustainable energy sources</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="action" class="tab-content">
+                    <div class="card">
+                        <h3>Personal Impact Calculator</h3>
+                        <div class="calculator">
+                            <input type="number" id="plastic-items" placeholder="Enter plastic items used per week">
+                            <button onclick="calculateImpact()">Take the Pledge</button>
+                        </div>
+                        <div id="impact-result" class="impact-result"></div>
+                        <p id="pledge-count">0 people have pledged to reduce plastic waste</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.querySelectorAll(".tab-button").forEach(button => {
+                button.addEventListener("click", () => {
+                    document.querySelectorAll(".tab-button").forEach(btn => 
+                        btn.classList.remove("active")
+                    );
+                    document.querySelectorAll(".tab-content").forEach(content => 
+                        content.classList.remove("active")
+                    );
+                    
+                    button.classList.add("active");
+                    const tabId = button.getAttribute("data-tab");
+                    document.getElementById(tabId).classList.add("active");
+                });
+            });
+    
+            let pledgeCount = 0;
+    
+            function calculateImpact() {
+                const items = document.getElementById("plastic-items").value;
+                const impact = items * 2.5;
+                
+                const resultDiv = document.getElementById("impact-result");
+                resultDiv.style.display = "block";
+                resultDiv.innerHTML = "Your annual plastic waste impact: " + impact + "kg CO2e";
+                
+                pledgeCount++;
+                document.getElementById("pledge-count").innerHTML = 
+                    pledgeCount + " people have pledged to reduce plastic waste";
+            }
+    
+            document.querySelectorAll(".progress-fill").forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = "0";
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        </script>
+        <section id="about">
+            <h2>Understanding Plastic Waste</h2>
+                <p>Plastic has become an integral part of our daily lives, but its convenience comes at a cost. Explore the journey of plastic from production to pollution and its impact on the environment.</p>
+                <img src="https://assets.theoceancleanup.com/scaled/1200x675/app/uploads/2023/04/Large-220604_Guatemala_Helicopter_Val_S5_pic_324-scaled.jpg" alt="Plastic Waste Image">
+                <p>While plastic has many valuable uses, we have become addicted to single-use plastic products — with severe environmental, social, economic and health consequences.</p>
+
+                <p> Around the world, one million plastic bottles are purchased every minute, while up to five trillion plastic bags are used worldwide every year. In total, half of all plastic produced is designed for single-use purposes – used just once and then thrown away.</p>
+
+                <p>Plastics including microplastics are now ubiquitous in our natural environment. They are becoming part of the Earth's fossil record and a marker of the Anthropocene, our current geological era. They have even given their name to a new marine microbial habitat called the "plastisphere". </p>
+
+
+                
+                
+                <p>Plastic waste is a global problem that harms the environment, human health, and the economy. Here are some facts about plastic waste:</p>
+ 
+                <h3> Durability </h3>
+                <p> Plastic is very durable and can take up to 1,000 years to break down. </p>
+ 
+                <h3>Pollution</h3>
+                <p> Every year, 19–23 million tons of plastic waste leaks into the world's oceans, rivers, and lakes. </p>
+ 
+                <h3>Sources</h3>
+                <p> Plastic waste comes from many sources, including littering, industrial activities, construction, and agriculture. </p>
+ 
+                <h3>Types</h3>
+                <p> The most common types of plastic waste include cigarette butts, food wrappers, bottles, shopping bags, straws, and stirrers. </p>
+ 
+                 <h3>Effects</h3>
+                <p> Plastic waste can harm marine animals, damage soil, poison groundwater, and contribute to climate change. </p>
+ 
+                <h3>Additives</h3>
+                <p> Plastics often contain additives that can make them stronger, more flexible, and durable. Some of these additives are persistent organic pollutants (POPs). </p>
+
+        </section>
+    
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to learn more about our project or to provide feedback.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 From Convenience to Consequence: The Environmental Impact of Plastic Waste</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
