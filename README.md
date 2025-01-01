@@ -1,4 +1,4 @@
-# Plastic Waste Management  
+w# Plastic Waste Management  
 
 ## Overview  
 This project is an interactive and educational website aimed at raising awareness about the environmental impact of plastic waste. It provides valuable insights into the dangers of plastic pollution and promotes sustainable waste management practices.  
@@ -22,7 +22,8 @@ This project was developed as part of the **CHE110 academic assignment** at LPU.
    ```bash
    git clone https://github.com/your-username/plastic-waste-management.git
 2. Navigate to the project folder:
-    cd plastic-waste-management
+
+    ``cd plastic-waste-management``
 3. Open the index.html file in any web browser to view the website.
 
 Contributing
